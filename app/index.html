@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docker Storage – Dark Theme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #e5e7eb;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #020617;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .navbar h2 {
+            color: #38bdf8;
+        }
+
+        .nav-links a {
+            color: #cbd5f5;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* Content */
+        .container {
+            padding: 40px;
+        }
+
+        .container h1 {
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+
+        .container p {
+            margin-bottom: 30px;
+            color: #94a3b8;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #020617;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            border: 1px solid #1e293b;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #e5e7eb;
+        }
+
+        .card ul {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-left: 18px;
+        }
+
+        .card ul li {
+            margin-bottom: 8px;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .volume {
+            background-color: #16a34a;
+            color: #052e16;
+        }
+
+        .bind {
+            background-color: #2563eb;
+            color: #020617;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>Docker Storage</h2>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Volumes</a>
+            <a href="#">Bind Mounts</a>
+            <a href="#">Docs</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Volume vs Bind Mount</h1>
+        <p>Persistent storage options in Docker explained with a clean dark UI.</p>
+
+        <div class="card-grid">
+
+            <!-- Volume Card -->
+            <div class="card">
+                <h3>Docker Volume</h3>
+                <ul>
+                    <li>Fully managed by Docker</li>
+                    <li>Safer for production workloads</li>
+                    <li>Easy backup & migration</li>
+                    <li>Independent of host structure</li>
+                </ul>
+                <span class="tag volume">Production</span>
+            </div>
+
+            <!-- Bind Mount Card -->
+            <div class="card">
+                <h3>Bind Mount</h3>
+                <ul>
+                    <li>Uses host file system directly</li>
+                    <li>Great for local development</li>
+                    <li>Live file changes</li>
+                    <li>Less portable</li>
+                </ul>
+                <span class="tag bind">Development</span>
+            </div>
+
+        </div>
+
+        <footer>
+            © 2026 Docker Storage Demo | Dark Theme UI
+        </footer>
+    </div>
+
+</body>
+</html>
